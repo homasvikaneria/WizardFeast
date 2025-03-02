@@ -1,0 +1,662 @@
+/* General Styling for the Dropdown Container */
+.category-dropdown {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  /* Center the Dropdowns */
+  .category-dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f4f4f4; /* Light neutral background */
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label Styling */
+  .category-dropdown label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Select Dropdown Styling */
+  .category-dropdown select {
+    width: 180px;
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .category-dropdown select:focus {
+    border-color: #005a9c;
+    box-shadow: 0 0 5px rgba(0, 90, 156, 0.5);
+  }
+  
+  .category-dropdown select:hover {
+    border-color: #005a9c;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .category-dropdown-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .category-dropdown {
+      margin: 10px 0;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.house-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Neutral light background */
+  }
+  
+  .house-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    width: 300px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .house-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .house-emoji {
+    font-size: 80px; 
+    margin-bottom: 15px;
+  }
+  
+  .house-name {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  
+  .house-animal,
+  .house-founder {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  /* Magic Borders */
+  .house-card::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 18px;
+    z-index: -1;
+    background: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+
+  }
+  
+
+  
+  /* Gryffindor */
+  .house-card.gryffindor {
+    background: linear-gradient(to right, #7f0909, #d3a625);
+  }
+  
+  .house-card.gryffindor::before {
+    background: linear-gradient(45deg, #d3a625, #7f0909);
+  }
+  
+  /* Slytherin */
+  .house-card.slytherin {
+    background: linear-gradient(to right, #0d6217, #1b998b);
+  }
+  
+  .house-card.slytherin::before {
+    background: linear-gradient(45deg, #aaaaaa, #0d6217);
+  }
+  
+  /* Ravenclaw */
+  .house-card.ravenclaw {
+    background: linear-gradient(to right, #0e1a40, #5a67d8);
+  }
+  
+  .house-card.ravenclaw::before {
+    background: linear-gradient(45deg, #946b2d, #0e1a40);
+  }
+  
+  /* Hufflepuff */
+  .house-card.hufflepuff {
+    background: linear-gradient(to right, #f0c808, #e08e45);
+  }
+  
+  .house-card.hufflepuff::before {
+    background: linear-gradient(45deg, #f0c808, #60605c);
+  }
+
+
+
+
+
+
+
+
+
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; 
+    justify-items: center;
+  }
+  
+  .character-card {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .character-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 4px solid #007acc;
+  }
+  
+  .character-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  
+  .character-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .character-card:hover::after {
+    opacity: 1;
+  }
+  
+  .character-list p {
+    font-size: 20px;
+    color: #888;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+
+.spell-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+
+  .spell-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .spell-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .spell-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    width: 150px; 
+    text-align: left;
+  }
+  
+  .spell-card p {
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+  .spell-cards-container p {
+    font-size: 20px;
+    color: #dfd6d6;
+  }
+  
+
+/* Card hover effect */
+.spell-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Text alignment within cards */
+.spell-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Spell name styling */
+.spell-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white; /* Explicit white color for the name */
+}
+
+/* Spell description styling */
+.spell-description {
+  font-size: 16px;
+  font-weight: 300;
+  color: white; /* Explicit white color for the description */
+}
+
+/* Different backgrounds for each card */
+.spell-card.theme-1 {
+  background-color: #1b2a49; /* Mystic Navy */
+}
+
+.spell-card.theme-2 {
+  background-color: #4a1033; /* Crimson Shadow */
+}
+
+.spell-card.theme-3 {
+  background-color: #2a213e; /* Ethereal Violet */
+}
+
+.spell-card.theme-4 {
+  background-color: #2e3a45; /* Obsidian Blue */
+}
+
+.spell-card.theme-5 {
+  background-color: #3a2956; /* Midnight Amethyst */
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay for a mystical effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #4b2e83, #2c2f54); /* Deep purple and dark blue gradient for magical vibes */
+  padding: 20px;
+  border-radius: 10px;
+  height: 585px;
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.7); /* Strong mystical shadow */
+  color: #f8f8f2; /* Soft parchment-like text color */
+  font-family: 'Georgia', serif; /* Magical and classic font style */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #8f0816; /* Rich red for an enchanted look */
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 50%; /* Rounded button */
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.close-button:hover {
+  background: #d62828; /* Darker red for hover effect */
+}
+
+.modal-content img {
+  width: 300px;
+  height: 350px;
+  border-radius: 8px;
+  margin: 15px 0px 10px 0px;
+  border: 2px solid #ffd700; /* Bright gold border for the image */
+  box-shadow: 0px 4px 10px rgba(255, 223, 0, 0.7); /* Glow effect around the image */
+}
+
+.modal-content h2 {
+  font-size: 1.4rem;
+  color: #b19110; /* Golden-yellow title for elegance */
+  margin-bottom: 5px;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #b0c4de; /* Soft silver for text */
+}
+
+.modal-content p strong {
+  font-weight: bold;
+  color: #ffd700; /* Gold for highlighting key information */
+}
+
+.modal-content p:nth-child(even) {
+  color: #f4a261; /* Alternating text in warm magical orange */
+}
+
+
+.modal-character-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay for a mystical effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-character-content {
+  background: linear-gradient(135deg, #4b2e83, #2c2f54); /* Deep purple and dark blue gradient for magical vibes */
+  padding: 20px;
+  border-radius: 10px;
+  height: 585px;
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.7); /* Strong mystical shadow */
+  color: #f8f8f2; /* Soft parchment-like text color */
+  font-family: 'Georgia', serif; /* Magical and classic font style */
+}
+
+.close-character-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #8f0816; /* Rich red for an enchanted look */
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 50%; /* Rounded button */
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.close-character-button:hover {
+  background: #d62828; /* Darker red for hover effect */
+}
+
+.modal-character-content img {
+  width: 300px;
+  height: 350px;
+  border-radius: 8px;
+  margin: 15px 0px 10px 0px;
+  border: 2px solid #ffd700; /* Bright gold border for the image */
+  box-shadow: 0px 4px 10px rgba(255, 223, 0, 0.7); /* Glow effect around the image */
+}
+
+.modal-character-content h2 {
+  font-size: 1.4rem;
+  color: #f5dc78; /* Golden-yellow title for elegance */
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.modal-character-content p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #b0c4de; /* Soft silver for text */
+}
+
+.modal-character-content p strong {
+  font-weight: bold;
+  color: #ffd700; /* Gold for highlighting key information */
+}
+
+.modal-character-content p:nth-child(even) {
+  color: #f4a261; /* Alternating text in warm magical orange */
+}
+
+
+
+
+
+.book-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 12px;
+}
+
+/* Individual Book Card */
+.book-card {
+  cursor: pointer;
+  width: 220px;
+  background: linear-gradient(145deg, #ffffff, #f4f4f4);
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Image Styling */
+.book-image {
+  width: 100%; /* Fully responsive */
+  height: 300px; /* Fixed height for uniformity */
+  object-fit: contain; /* Ensure the entire image is visible */
+  border-bottom: 3px solid #d1d1d1;
+  background-color: #f8f8f8; /* Neutral background for images with transparency */
+}
+
+/* Book Title Styling */
+.book-card h4 {
+  font-size: 1.1rem;
+  margin: 15px 10px 10px;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* Additional Text Styling */
+.book-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Hover Overlay Effect (Optional) */
+.book-card:hover .book-image {
+  filter: brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-cards-container {
+    gap: 15px;
+  }
+  .book-card {
+    width: 180px;
+  }
+  .book-image {
+    height: 250px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  height: 460px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Layout for Modal Content */
+.modal-book-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Left: Book Image */
+.book-modal-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Right: Book Details */
+.book-modal-details {
+  flex-grow: 1;
+}
+
+.book-modal-details h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #021866;
+}
+
+.book-modal-details p {
+  margin: 5px 0;
+  line-height: 1.5;
+  align-items: start;
+  color: #333;
+}

@@ -1,0 +1,344 @@
+/* Container Styling */
+
+/* body{
+    margin: 130px 0px 0px 0px;
+} */
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 10px; /* Reduced gap between search bar and dropdowns */
+}
+
+/* Search Bar */
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  background: linear-gradient(to right, #f7f7f7, #ffccd5);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px; /* Reduced space below the search bar */
+}
+
+/* Input Field */
+.searchBar input {
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchBar input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.6);
+}
+
+/* Search Button */
+.searchBar button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchBar button:hover {
+  background-color: #ff3b2d;
+  transform: scale(1.05);
+}
+
+.searchBar button:active {
+  transform: scale(1);
+}
+
+/* CATEGORIES WISE and NAME SEARCH Text */
+.container h2 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+/* Center Container for Dropdowns */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Reduced gap between dropdowns */
+  margin-top: 10px; /* Reduced margin at the top */
+}
+
+/* Dropdown Container */
+.dropdown-container {
+  text-align: left;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Dropdown Label */
+.dropdown-container label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #2a5298;
+  font-weight: bold;
+  display: block;
+}
+
+/* Dropdown Select */
+.dropdown-container select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #1e3c72;
+  background: #ffffff;
+  border: 2px solid #2a5298;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dropdown-container select:hover {
+  border-color: #1e3c72;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-container select:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 6px 12px rgba(45, 90, 163, 0.5);
+}
+
+.dropdown-container label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #2a5298;
+  font-weight: bold;
+  display: block; /* Ensures label is above dropdown */
+}
+
+.dropdown-container select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #1e3c72;
+  background: #ffffff;
+  border: 2px solid #2a5298;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dropdown-container select:hover {
+  border-color: #1e3c72;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-container select:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 6px 12px rgba(45, 90, 163, 0.5);
+}
+
+
+
+
+
+
+/* General styles for the meal cards container */
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Space between cards */
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f4f4f9; /* Soft background for the card section */
+}
+
+/* Individual card styles */
+.mealImg {
+  background: linear-gradient(135deg, #f7f7f7, #e0e0e0); /* Subtle gradient background for card */
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 22%; /* 4 cards in a row */
+  height: auto; /* Height adjusts based on content */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+.mealImg:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f3f3f3, #d0d0d0); /* Slight gradient shift on hover */
+}
+
+/* Image styles */
+.mealImg img {
+  width: 100%;
+  height: 180px; /* Fixed height for better consistency */
+  object-fit: cover; /* Ensures the image fills its container without distortion */
+  border-radius: 8px;
+  margin-bottom: 0.8rem; /* Space between image and text */
+  transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+.mealImg:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Name (Title) styles */
+.mealImg .meal-name {
+  font-size: 1.1rem; /* Slightly larger text for meal name */
+  font-weight: 700;
+  color: #333; /* Darker text for emphasis */
+  margin: 0.5rem 0;
+}
+
+/* Area styles */
+.mealImg .meal-area {
+  font-size: 0.9rem; /* Smaller text */
+  color: #6c757d; /* Muted gray */
+  margin: 0.2rem 0; /* Reduced margin */
+}
+
+/* ID styles */
+.mealImg .meal-id {
+  font-size: 0.8rem; /* Smaller text */
+  color: #a1a1a1; /* Light gray */
+  margin: 0.2rem 0; /* Reduced margin */
+}
+
+/* Button styles */
+.mealImg .meal-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #4b79a1, #283e51); /* Pastel gradient */
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.mealImg .meal-btn:hover {
+  background: linear-gradient(135deg, #405f72, #2a4b61); /* Slightly darker gradient on hover */
+  transform: scale(1.05); /* Zoom effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+/* Horizontal Full-Width Card with New Colors */
+.recipe-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: stretch; /* Aligns the image and content properly */
+  width: 100%; /* Card fits container width */
+  max-width: 1200px;
+  margin: 20px auto; /* Center the card */
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* Soft blue gradient */
+  color: #ffffff; /* Light text for readability */
+  border: 2px solid #2d5aa3; /* Subtle border color */
+  border-radius: 12px;
+  overflow: hidden; /* Keeps content inside the box */
+  box-shadow: 0 8px 15px rgba(45, 90, 163, 0.5); /* Elegant shadow */
+  padding: 15px; /* Space inside the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 20px rgba(45, 90, 163, 0.7); /* Adds depth on hover */
+  border-color: #3c6db3; /* Enhances the border effect on hover */
+}
+
+/* Image Styling */
+.recipe-image {
+  flex: 1; /* Image takes up one part */
+  max-width: 40%; /* Restrict image width */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  border-radius: 8px; /* Rounds the image slightly for a modern look */
+  margin-right: 15px; /* Spacing between image and text */
+}
+
+/* Content Styling */
+.recipe-details {
+  flex: 2; /* Text takes up remaining space */
+  padding: 15px; /* Space inside the text container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligns content from top to bottom */
+}
+
+.recipe-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #f8d347; /* Highlighted meal name in a golden tone */
+}
+
+.recipe-details p {
+  margin: 10px 0; /* Uniform spacing between text */
+  font-size: 1rem;
+  color: #e0e0e0; /* Muted color for details */
+}
+
+.recipe-details strong {
+  color: #f8d347; /* Accent color for strong elements */
+}
+
+.instructions {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent background for instructions */
+  border-radius: 8px;
+  color: #ffffff; /* Light text */
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipe-card {
+    flex-direction: column; /* Stacks image and content vertically */
+  }
+
+  .recipe-image {
+    max-width: 100%;
+    height: 250px; /* Restrict height for smaller screens */
+    margin: 0 auto 15px; /* Center image vertically */
+  }
+
+  .recipe-details {
+    padding: 10px;
+  }
+}

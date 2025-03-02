@@ -1,0 +1,128 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Quicksand:wght@500&display=swap');
+
+/* Main Navbar container */
+.navbar-container {
+  width: 100%;
+  background: linear-gradient(135deg, #a6c1ee 0%, #f3c1d3 100%); /* Pastel gradient background */
+  padding: 1rem 0; /* Increased padding for better spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 12px; /* Rounded corners */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  z-index: 10;
+  position: sticky;
+  /* position: fixed; */
+  top: 0;
+}
+
+/* Navbar content (centralized) */
+.navbar {
+  width: 100%;
+  max-width: 1200px; /* Limit width */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333333; /* Dark text for contrast */
+}
+
+/* Navbar list (flex display) */
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Navbar item styling */
+li {
+  flex: 1;
+  text-align: center;
+}
+
+/* NavLink Styling (Improved) */
+.navlink {
+  display: block;
+  text-decoration: none;
+  color: #333333; /* Dark text */
+  font-size: 1.1rem; /* Medium size */
+  font-weight: 600; /* Bold text */
+  padding: 1rem 1.5rem; /* Increased padding for a more clickable area */
+  border-radius: 8px; /* Rounded corners for each link */
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: 'Quicksand', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for NavLink */
+.navlink:hover,
+.navlink:active {
+  background-color: #205498; /* Light coral for hover state */
+  color: #ffffff; /* White text on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Active NavLink styling */
+.navlink.active {
+  background-color: #205498; /* Light coral for active state */
+  color: #ffffff; /* White text */
+  transform: translateY(-3px); /* Keep the hover effect even when active */
+}
+
+/* Button Styling with Darker Shade */
+.button {
+  display: inline-block;
+  background-color: #d14f4a; /* Darker coral red for the button */
+  color: white;
+  padding: 12px 30px; /* Larger padding for the button */
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px; /* Rounded button */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #205498; /* Even darker coral on hover */
+  color: #fff; /* White text on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Button active effect */
+.button:active {
+  background-color: #205498; /* Darker shade when clicked */
+  transform: scale(1); /* Return to normal size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Stacking the navbar items vertically on mobile */
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navlink {
+    font-size: 1.2rem; /* Slightly larger font size on mobile */
+    padding: 1rem 2rem; /* More padding for better touch targets */
+  }
+
+  .button {
+    padding: 14px 28px; /* Larger buttons on mobile */
+    font-size: 1.2rem; /* Slightly larger font size */
+  }
+}
